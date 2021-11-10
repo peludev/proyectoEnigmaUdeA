@@ -14,3 +14,6 @@ Profesión: Ingeniero de Sistemas, intereses: ciencia de datos, familia: esposa 
 
 Danny Gómez
 Profesión: Psicólogo - Diseñador Gráfico, Intereses: frontend, UI/UX, emprendimiento, Hobbies: estudiar en línea, video juegos, leer y ayudar a otros.
+
+Adriana
+Profesión: Ingeniera de Sistemas, actualmente me desempeño como Docente de aula. Intereses: ciencia de datos, diseño web. Hobbies: realizar cursos de actualización, cine.
