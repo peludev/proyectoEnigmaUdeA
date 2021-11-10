@@ -11,3 +11,6 @@ Presentaciones
 
 Luis 
 Profesión: Ingeniero de Sistemas, intereses: ciencia de datos, familia: esposa e hijo, hobbies: jugar tenis
+
+Danny Gómez
+Profesión: Psicólogo - Diseñador Gráfico, Intereses: frontend, UI/UX, emprendimiento, Hobbies: estudiar en línea, video juegos, leer y ayudar a otros.
