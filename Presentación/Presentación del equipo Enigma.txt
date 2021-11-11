@@ -17,3 +17,6 @@ Profesión: Psicólogo - Diseñador Gráfico, Intereses: frontend, UI/UX, empren
 
 Adriana
 Profesión: Ingeniera de Sistemas, actualmente me desempeño como Docente de aula. Intereses: ciencia de datos, diseño web. Hobbies: realizar cursos de actualización, cine.
+
+Verónica
+Profesión: Estudiante de Estadística, Intereses: Machine Learning, Big Data, Hobbies: Compartir con la familia, jugar baloncesto.
