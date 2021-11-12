@@ -20,3 +20,6 @@ Profesión: Ingeniera de Sistemas, actualmente me desempeño como Docente de aul
 
 Verónica
 Profesión: Estudiante de Estadística, Intereses: Machine Learning, Big Data, Hobbies: Compartir con la familia, jugar baloncesto.
+
+Pedro
+Profesión: Ingeniero Químico. Intereses: desarrollo web, ciencia de datos y macrodatos. Hobbies: leer noticias, blogs, o ver partidos de fútbol.
