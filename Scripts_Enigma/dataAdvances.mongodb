@@ -1,0 +1,40 @@
+const database = 'enigmar-db';
+use(database);
+
+collection = 'advances';
+
+const Advances = [
+  {
+    "project_id": db.projects.findOne({name: 'Project 1'}, {_id: 1})._id,
+    "addDate": new Date(),
+    "description": 'Descripción 1',
+    "observations": ["Observación A", "observación B"]
+  },
+  {
+    "project_id": db.projects.findOne({name: 'Project 2'}, {_id: 1})._id,
+    "addDate": new Date(),
+    "description": 'Descripción 2',
+    "observations": ["Observación C", "observación D"]
+  },
+  {
+    "project_id": db.projects.findOne({name: 'Project 3'}, {_id: 1})._id,
+    "addDate": new Date(),
+    "description": 'Descripción 3',
+    "observations": ["Observación E", "observación F"]
+  },
+  {
+    "project_id": db.projects.findOne({name: 'Project 4'}, {_id: 1})._id,
+    "addDate": new Date(),
+    "description": 'Descripción 4',
+    "observations": ["ObservaciónG", "observación H"]
+  },
+  {
+    "project_id": db.projects.findOne({name: 'Project 5'}, {_id: 1})._id,
+    "addDate": new Date(),
+    "description": 'Descripción 5',
+    "observations": ["Observación J", "observación K"]
+  }
+];
+
+db.getCollection(collection).insertMany(Advances);
+

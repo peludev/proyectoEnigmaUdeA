@@ -1,0 +1,25 @@
+const database = 'enigmar-db';
+use(database);
+
+collection = 'enrollments';
+
+const Enrollments = [
+  {
+    "project_id": db.projects.findOne({name: 'Project 1'}, {_id: 1})._id,
+    "user_id": db.users.findOne({email: 'usuario1@mail.com'}, {_id: 1})._id
+  },
+  {
+    "project_id": db.projects.findOne({name: 'Project 2'}, {_id: 1})._id,
+    "user_id": db.users.findOne({email: 'usuario2@mail.com'}, {_id: 1})._id
+  },
+  {
+    "project_id": db.projects.findOne({name: 'Project 3'}, {_id: 1})._id,
+    "user_id": db.users.findOne({email: 'usuario5@mail.com'}, {_id: 1})._id
+  },
+  {
+    "project_id": db.projects.findOne({name: 'Project 1'}, {_id: 1})._id,
+    "user_id": db.users.findOne({email: 'usuario3@mail.com'}, {_id: 1})._id
+  }
+];
+
+db.getCollection(collection).insertMany(Enrollments);

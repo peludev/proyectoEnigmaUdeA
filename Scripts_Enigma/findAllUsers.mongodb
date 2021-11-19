@@ -1,0 +1,4 @@
+const database = 'enigmar-db';
+use(database);
+
+db.users.find();

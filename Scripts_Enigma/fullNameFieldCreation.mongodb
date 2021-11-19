@@ -1,0 +1,14 @@
+// creation of fullName field
+const database = 'enigmar-db';
+use(database);
+
+db.users.aggregate(
+{$addFields: {
+ fullName: {
+  $concat: [
+   '$name',
+   ' ',
+   '$lastName'
+  ]
+ }
+}});

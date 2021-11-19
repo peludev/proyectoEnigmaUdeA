@@ -1,0 +1,12 @@
+const database = 'enigmar-db';
+use(database);
+
+
+db.users.updateOne(
+  {documentId: {$eq: 1234567890}},
+  {
+
+    $set: {"status": "authorized"},
+
+  }
+)

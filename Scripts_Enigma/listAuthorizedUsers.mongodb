@@ -1,0 +1,11 @@
+const database = 'enigmar-db';
+use(database);
+
+// To list authorized users
+db.users.aggregate(
+[{
+    $match: {
+        status: 'authorized'
+    }
+}])
+

@@ -1,0 +1,59 @@
+const database = 'enigmar-db';
+use(database);
+
+collection = 'projects';
+
+const Projects = [
+    {
+        "name": "Project 1",
+        "generalObjective": "Objetivo general 1",
+        "specificObjectives": ["Objetivo específico 1", "Objetivo específico 2", "Objetivo específico 3"],
+        "budget": Decimal128('15000000'),
+        "startDate": new Date(),
+        "endDate": new Date(new Date().getTime() + 60*24*60*60000),
+        "leader_id": db.users.findOne({email: 'usuario1@mail.com'})._id,
+        "status": "inactive",
+    },
+    {
+        "name": "Project 2",
+        "generalObjective": "Objetivo general 1",
+        "specificObjectives": ["Objetivo específico 1", "Objetivo específico 2", "Objetivo específico 3"],
+        "budget": Decimal128('16000000'),
+        "startDate": new Date(),
+        "endDate": new Date(new Date().getTime() + 60*24*60*60000),
+        "leader_id": db.users.findOne({email: 'usuario2@mail.com'})._id,
+        "status": "inactive",
+    },
+    {
+        "name": "Project 3",
+        "generalObjective": "Objetivo general 1",
+        "specificObjectives": ["Objetivo específico 1", "Objetivo específico 2", "Objetivo específico 3"],
+        "budget": Decimal128('15000000'),
+        "startDate": new Date(),
+        "endDate": new Date(new Date().getTime() + 60*24*60*60000),
+        "leader_id": db.users.findOne({email: 'usuario1@mail.com'})._id,
+        "status": "inactive",
+    },
+    {
+        "name": "Project 4",
+        "generalObjective": "Objetivo general 1",
+        "specificObjectives": ["Objetivo específico 1", "Objetivo específico 2", "Objetivo específico 3"],
+        "budget": Decimal128('24000000'),
+        "startDate": new Date(),
+        "endDate": new Date(new Date().getTime() + 60*24*60*60000),
+        "leader_id": db.users.findOne({email: 'usuario5@mail.com'})._id,
+        "status": "inactive",
+    },
+    {
+        "name": "Project 5",
+        "generalObjective": "Objetivo general 1",
+        "specificObjectives": ["Objetivo específico 1", "Objetivo específico 2", "Objetivo específico 3"],
+        "budget": Decimal128('15000000'),
+        "startDate": new Date(),
+        "endDate": new Date(new Date().getTime() + 60*24*60*60000),
+        "leader_id": db.users.findOne({email: 'usuario3@mail.com'})._id,
+        "status": "inactive",
+    }
+];
+
+db.getCollection(collection).insertMany(Projects);

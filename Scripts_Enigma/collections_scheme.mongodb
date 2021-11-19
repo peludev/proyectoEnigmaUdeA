@@ -1,0 +1,152 @@
+const database = 'enigmar-db';
+use(database);
+
+// users collection creation
+collection = 'users';
+db.getCollection(collection).drop();
+
+db.createCollection(collection, {
+  validator: {
+    $jsonSchema: {
+      required: ['email', 'documentId', 'name', 'lastName', 'role', 'status', 'password'],
+      properties: {
+        email: {
+          bsonType: 'string',
+          pattern: '^[a-z0-9+_.-]+@[a-z0-9.-]+$'
+        },
+        documentId: {
+          bsonType: 'long',
+        },
+        name: {
+          bsonType: 'string'
+        },
+        lastName: {
+          bsonType: 'string'
+        },
+        fullName: {
+          bsonType: 'string'
+        },        
+        role: {
+          enum: ["admin", "leader", "student"]
+        },
+        status: {
+          enum: ["pending", "authorized", "unauthorized"]
+        },
+        password: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+
+// Including Indexes 
+db.getCollection(collection).createIndex({email:1}, {unique: true});
+db.getCollection(collection).createIndex({documentId:1}, {unique: true});
+
+
+// projects collection creation
+collection = 'projects';
+db.getCollection(collection).drop();
+
+db.createCollection(collection, {
+  validator: {
+    $jsonSchema: {
+      required: ['name', 'generalObjective', 'specificObjectives', 'budget', 'startDate', 'endDate', 'leader_id'],
+      properties: {
+        name: {
+          bsonType: 'string',
+        },
+        generalObjective: {
+          bsonType: 'string'
+        },
+        specificObjectives: {
+          bsonType: 'array'
+        },
+        budget: {
+          bsonType: 'decimal'
+        },
+        startDate: {
+          bsonType: 'date'
+        },
+        endDate: {
+          bsonType: 'date'
+        },
+        leader_id: {
+          bsonType: 'objectId'
+        },
+        status: {
+          enum: ['active', 'inactive']
+        },
+        phase: {
+          enum: ['started', 'in progress', 'ended', null]
+        }
+      }
+    }
+  }
+});
+
+
+// enrollments colection creation
+collection = 'enrollments';
+db.getCollection(collection).drop();
+
+db.createCollection(collection, {
+  validator: {
+    $jsonSchema: {
+      required: ['project_id', 'user_id'],
+      properties: {
+        project_id: {
+          bsonType: 'objectId',
+        },
+        user_id: {
+          bsonType: 'objectId'
+        },
+        status: {
+          enum: ['accepted', 'rejected']
+        },
+        enrollmentDate: {
+          bsonType: 'date'
+        },
+        egressDate: {
+          bsonType: 'date'
+        }
+      }
+    }
+  }
+});
+
+// Including Indexes 
+db.getCollection(collection).createIndex({project_id: 1, user_id: 1}, {unique: true, name: '_project_user_'});
+
+
+// advances collection creation
+collection = 'advances';
+db.getCollection(collection).drop();
+
+db.createCollection(collection, {
+  validator: {
+    $jsonSchema: {
+      required: ['project_id', 'addDate', 'description', 'observations'],
+      properties: {
+        project_id: {
+          bsonType: 'objectId',
+        },
+        addDate: {
+          bsonType: 'date'
+        },
+        description: {
+          bsonType: 'string'
+        },
+        observations: {
+          bsonType: 'array'
+        }
+      }
+    }
+  }
+});
+
+
+
+
+
