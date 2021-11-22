@@ -1,0 +1,8 @@
+const database = 'enigmar-db';
+use(database);
+db.projects.aggregate(
+[{
+    $match: {
+        status: 'inactive'
+    }
+}]);
