@@ -24,11 +24,17 @@ module.exports = {
   createUser: async args => {
     try {
       // Creamos un objeto a partir de los args que son los que mandamos
-      const { email, name } = args.user
+      const { email, documentId, name, lastName, fullName, role, status, password } = args.user
       // Creamos el objeto article con el objeto anterior
       const user = new User({
         email,
+        documentId,
         name,
+        lastName,
+        fullName,
+        role,
+        status,
+        password
       })
       // Hacemos un await guardando el articulo creado con save
       const newUser = await user.save()

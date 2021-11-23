@@ -7,12 +7,24 @@ module.exports = buildSchema(`
   type User {
     _id: ID!
     email: String!
+    documentId: Int!
     name: String!
+    lastName: String!
+    fullName: String
+    role: String!
+    status: String!
+    password: String!  
   }
 
   input UserInput {
     email: String!
+    documentId: Int!
     name: String!
+    lastName: String!
+    fullName: String
+    role: String!
+    status: String!
+    password: String! 
   }
 
   type Query {
@@ -28,3 +40,4 @@ module.exports = buildSchema(`
     mutation: Mutation
   }
 `)
+

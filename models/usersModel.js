@@ -5,19 +5,49 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 // Instanciamos el objeto Schema enviando como propiedad la estructura 
-const UsersSchema = new Schema(
+const userSchema = new Schema(
   {
     email: {
-      type: String,
-      required: true,
+        type: String,
+        required: true,
+    },
+
+    documentId: {
+        type: Number,
+        required: true,
     },
 
     name: {
-      type: String,
-      required: true,
+        type: String,
+        required: true,
     },
-  },
+
+    lastName: {
+        type: String,
+        required: true,
+    },
+
+    fullName: {
+        type: String,
+    },
+
+    role: {
+        type: String,
+        enum: ['student', 'leader', 'admin'],
+    },
+
+    status: {
+        type: String,
+        required: true,
+        enum: ['pending', 'authorized', 'unauthorized'],
+    },
+
+    password: {
+        type: String,
+        required: true,
+    }
+  }
 )
 
 // Exportamos el modelo del esquema
-module.exports = mongoose.model("User", UsersSchema)
+module.exports = mongoose.model("User", userSchema)
