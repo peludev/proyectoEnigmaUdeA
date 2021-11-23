@@ -1,7 +1,10 @@
 {
   "name": "enigmar-back",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
   "repository": "https://github.com/pacostaperez/proyectoEnigmaUdeA.git",
   "author": "adriana75 <tecnologianormal@hotmail.com>",
   "license": "MIT",
