@@ -7,6 +7,7 @@ const typesProjects = gql`
         generalObjetive: String!
         specificObjetives: String!
         budget: Float!
+        leader_id: User!
         startDate: Date!
         endDate: Date!
         status: String
@@ -22,6 +23,7 @@ const typesProjects = gql`
             generalObjetive: String!
             specificObjetives: String!
             budget: Float!
+            leader_id: User!
             startDate: Date!
             endDate: Date!
             status: String

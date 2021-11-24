@@ -66,7 +66,7 @@ userSchema.virtual('project', {
     foreignField: 'user',
 });
 
-const UsersModel = model('User', userSchema)
+const usersModel = model('User', userSchema)
 
 // Exportamos el modelo del esquema
-export { UsersModel };
+export default { usersModel };
