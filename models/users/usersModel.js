@@ -1,8 +1,9 @@
 // Traemos el objeto mongoose desde la dependencia
-const mongoose = require("mongoose")
+import mongoose from 'mongoose';
+
 
 // Creamos una constante llamada Schema con un objeto de mongoose
-const Schema = mongoose.Schema
+const { Schema, model } = mongoose;
 
 // Instanciamos el objeto Schema enviando como propiedad la estructura 
 const userSchema = new Schema(
@@ -48,7 +49,9 @@ const userSchema = new Schema(
         required: true,
     }
   }
-)
+);
+
+const UserModel = model('User', userSchema)
 
 // Exportamos el modelo del esquema
-module.exports = mongoose.model("User", userSchema)
+export { UserModel };
