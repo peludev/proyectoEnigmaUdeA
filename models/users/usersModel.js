@@ -1,4 +1,3 @@
-// Traemos el objeto mongoose desde la dependencia
 import mongoose from 'mongoose';
 
 
@@ -66,7 +65,7 @@ userSchema.virtual('project', {
     foreignField: 'user',
 });
 
-const usersModel = model('User', userSchema)
+const UsersModel = model('User', userSchema)
 
 // Exportamos el modelo del esquema
-export default { usersModel };
+export { UsersModel };
