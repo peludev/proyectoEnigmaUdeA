@@ -35,4 +35,4 @@ const enrollmentSchema = new Schema (
 );
 
 const EnrollmentsModel = model('Enrollment', enrollmentSchema)
-export default { EnrollmentsModel };
+export { EnrollmentsModel };

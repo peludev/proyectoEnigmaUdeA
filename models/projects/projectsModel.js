@@ -10,12 +10,12 @@ const projectSchema = new Schema(
             required: true,
         },
 
-        generalObjetive: {
+        generalObjective: {
             type: String,
             required: true,
         },
 
-        specificObjetives: {
+        specificObjectives: {
             type: Array,
             required: true,
         },
@@ -61,4 +61,4 @@ const projectSchema = new Schema(
 
 
 const ProjectModel = model('Project', projectSchema)
-export default { ProjectModel };
+export { ProjectModel };

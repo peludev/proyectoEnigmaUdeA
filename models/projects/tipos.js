@@ -4,17 +4,16 @@ const typesProjects = gql`
     type Project {
         _id: ID!
         name: String!
-        generalObjetive: String!
-        specificObjetives: String!
+        generalObjective: String!
+        specificObjectives: String!
         budget: Float!
-        leader_id: User!
         startDate: Date!
         endDate: Date!
         status: String
         phase: String
     }
     type Query {
-        Projects: [User]
+        Projects: [Project]
         Project(_id: String!): Project
     }
     type Mutation {
@@ -23,7 +22,6 @@ const typesProjects = gql`
             generalObjetive: String!
             specificObjetives: String!
             budget: Float!
-            leader_id: User!
             startDate: Date!
             endDate: Date!
             status: String
