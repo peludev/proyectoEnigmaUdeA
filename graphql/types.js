@@ -1,5 +1,6 @@
 import { gql } from 'apollo-server-express';
 import { typesUsers } from '../models/users/tipos.js';
+//import { typesProjects } from '../models/projects/tipos.js';
 
 const typesGlobals = gql`
     scalar Date
@@ -7,5 +8,6 @@ const typesGlobals = gql`
 
 export const types = [
     typesGlobals,
-    typesUsers
+    typesUsers,
+    //typesProjects
 ];
