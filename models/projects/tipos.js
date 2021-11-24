@@ -5,7 +5,7 @@ const typesProjects = gql`
         _id: ID!
         name: String!
         generalObjective: String!
-        specificObjectives: String!
+        specificObjectives: [String]!
         budget: Float!
         startDate: Date!
         endDate: Date!
