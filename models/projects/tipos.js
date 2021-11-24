@@ -19,8 +19,8 @@ const typesProjects = gql`
     type Mutation {
         inputProject(
             name: String!
-            generalObjetive: String!
-            specificObjetives: String!
+            generalObjective: String!
+            specificObjectives: [String]!
             budget: Float!
             startDate: Date!
             endDate: Date!
