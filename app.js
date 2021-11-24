@@ -19,7 +19,7 @@ app.use(
 )
 // Este es el uri para la conexion a MongoDB se trae desde Mongo Atlas
 // Usamos process.env para obtener los valores desde Nodemon
-const uri = "mongodb+srv://admin:test@test.lkldf.mongodb.net/enigmar-db?retryWrites=true&w=majority"
+const uri = "mongodb+srv://admin-enigmar:enigma@mintic-c4.b562c.mongodb.net/enigmar-db?retryWrites=true&w=majority"
 // Declaramos las opciones para mongoose
 const options = { useNewUrlParser: true, useUnifiedTopology: true }
 
