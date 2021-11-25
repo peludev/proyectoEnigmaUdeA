@@ -14,7 +14,7 @@ const userSchema = new Schema(
     },
 
     documentId: {
-        type: Number,
+        type: String,
         required: true,
     },
 

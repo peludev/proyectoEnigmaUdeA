@@ -3,6 +3,7 @@ import { gql } from 'apollo-server-express';
 const typesUsers = gql`
   type User {
     _id: ID!
+    email: String!
     documentId: String!
     name: String!
     lastName: String!
@@ -17,6 +18,7 @@ const typesUsers = gql`
   }
   type Mutation {
     inputUser(
+        email: String!
         documentId: String!
         name: String!
         lastName: String!
