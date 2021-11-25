@@ -6,7 +6,12 @@ const resolversAdvances = {
             console.log('parent advance', parent);
             const advances = await AdvanceModel.find();
             return advances;
-        }
+        },
+
+        Advance: async (parent, args) => {
+            const advance = await AdvanceModel.findById(args._id);
+            return advance;
+        },
     }
 };
 

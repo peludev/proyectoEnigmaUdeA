@@ -3,6 +3,8 @@ import { gql } from 'apollo-server-express';
 const typesEnrollments = gql`
     type Enrollment {
         _id: ID!
+        project_id: String!
+        user_id: String!
         status: String
         enrollmentDate: Date
         egressDate: Date
@@ -13,6 +15,8 @@ const typesEnrollments = gql`
     }
     type Mutation {
         inputEnrollment(
+            project_id: String!
+            user_id: String!
             status: String
             enrollmentDate: Date
             egressDate: Date
