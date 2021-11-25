@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-//import { UsersModel } from '../users/usersModel.js';
+import { UsersModel } from '../users/usersModel.js';
 
 const { Schema, model } = mongoose;
 
@@ -38,7 +38,7 @@ const projectSchema = new Schema(
         leader_id: {
             type: Schema.Types.ObjectId,
             required: true,
-            //ref: UsersModel,
+            ref: UsersModel,
         },
 
         status: {
