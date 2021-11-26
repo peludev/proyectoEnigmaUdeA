@@ -27,6 +27,12 @@ const typesUsers = gql`
         status: String!
         password: String!
     ): User
+    userUpdate(
+      _id: String!
+      email: String!
+      status: String!
+      password: String!
+     ): User
   }
 `;
 

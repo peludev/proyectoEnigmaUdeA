@@ -28,7 +28,19 @@ const resolversUsers = {
       });
 
       return userCreado;
-    }
+    },
+    userUpdate: async (parent, args) => {
+      const usuarioEditado = await UsersModel.findByIdAndUpdate(
+        args._id,
+        {
+          email: args.email,
+          status: args.status,
+          password: args.password,
+        },
+        
+      );
+      return usuarioEditado;
+    },
   }
 
 };
