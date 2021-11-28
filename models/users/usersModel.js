@@ -58,7 +58,7 @@ const userSchema = new Schema(
 
 );
 
-userSchema.virtual('project', {
+userSchema.virtual('projects', {
     ref: 'Project',
     localField: '_id',
     foreignField: 'user',

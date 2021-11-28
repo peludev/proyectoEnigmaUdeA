@@ -9,7 +9,7 @@ const typesProjects = gql`
         budget: Float!
         startDate: Date!
         endDate: Date!
-        leader_id: String!
+        leader_id: User!
         status: String
         phase: String
     }
@@ -26,6 +26,11 @@ const typesProjects = gql`
             startDate: Date!
             endDate: Date!
             leader_id: String!
+            status: String
+            phase: String
+        ): Project
+        projectUpdate(
+            _id: String!
             status: String
             phase: String
         ): Project
