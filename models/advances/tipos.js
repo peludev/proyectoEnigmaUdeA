@@ -19,6 +19,11 @@ const typesAdvances = gql`
             description: String!
             observations: [String]!
         ): Advance
+        advanceUpdate(
+            _id: String!
+            description: String!
+            observations: [String]!
+        ): Advance
     }
 `;
 

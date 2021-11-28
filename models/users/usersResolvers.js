@@ -35,7 +35,7 @@ const resolversUsers = {
         {
           email: args.email,
           status: args.status,
-          password: args.password,
+          password: args.password
         },
         
       );
