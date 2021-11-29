@@ -4,7 +4,13 @@ const resolversUsers = {
   Query: {
     Users: async (parent, arg) =>{
       console.log('parent user', parent);
-      const users = await UsersModel.find();
+      const users = await UsersModel.find().populate([
+        {
+          path: 'projectsLeader',
+        }
+      ]
+
+      );
       return users;
     },
 

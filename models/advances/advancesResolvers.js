@@ -12,7 +12,17 @@ const resolversAdvances = {
             const advance = await AdvanceModel.findById(args._id);
             return advance;
         },
-    }
+    },
+    Mutation: {
+        inputAdvance: async (parents, args) => {
+            const advanceCreated = AdvanceModel.create({
+                addDate: args.addDate,
+                description: args.description,
+                project_id: args.project_id,
+            });
+            return advanceCreated;
+        },
+    },
 };
 
 export { resolversAdvances }

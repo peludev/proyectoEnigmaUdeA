@@ -12,8 +12,28 @@ const resolversEnrollments = {
       const enrollment = await EnrollmentsModel.findById(args._id);
       return enrollment;
     },
-  }
-
+  },
+  Mutation: {
+    inputEnrollment: async (parent, args) => {
+      const enrollmentCreated = await EnrollmentsModel.create({
+        status: args.status,
+        project_id: args.project_id,
+        user_id: args.user_id,
+      });
+      return enrollmentCreated;      
+    },
+    approveEnrollment: async (parent, args) => {
+      const enrollmentapproved = await EnrollmentsModel.findByIdAndUpdate(
+        args.id,
+        {
+          status: 'accepted',
+          enrollmentDate: Date.now(),
+        },
+        {new: true}
+      );
+      return enrollmentapproved;
+    },
+  },
 };
 
 export { resolversEnrollments }
