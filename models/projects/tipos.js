@@ -9,25 +9,25 @@ const typesProjects = gql`
         budget: Float!
         startDate: Date!
         endDate: Date!
-        leader_id: String!
-        status: String
-        phase: String
+        leader_id: User!
+        status: Enum_statusProject
+        phase: Enum_phaseProject
     }
     type Query {
         Projects: [Project]
         Project(_id: String!): Project
     }
     type Mutation {
-        inputProject(
+        createProject(
             name: String!
             generalObjective: String!
             specificObjectives: [String]!
             budget: Float!
             startDate: Date!
             endDate: Date!
-            leader_id: String!
-            status: String
-            phase: String
+            leader_id: String
+            status: Enum_statusProject
+            phase: Enum_phaseProject
         ): Project
     }
 `;

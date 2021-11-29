@@ -12,8 +12,20 @@ const resolversProjects = {
       const project = await ProjectModel.findById(args._id);
       return project;
     },
-  }
-
+  },
+  Mutation: {
+    createProject: async (parent, args, context) => {
+      const proyectCreated = await ProjectModel.create({
+        name: args.name,
+        startDate: args.startDate,
+        endDate: args.endDate,
+        budget: args.budget,
+        generalObjective: args.generalObjective,
+        specificObjectives: args.specificObjectives,
+      });
+      return proyectCreated;
+    },
+  },  
 };
 
 export { resolversProjects }

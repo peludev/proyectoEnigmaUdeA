@@ -37,18 +37,19 @@ const projectSchema = new Schema(
 
         leader_id: {
             type: Schema.Types.ObjectId,
-            required: true,
             ref: UsersModel,
         },
 
         status: {
             type: String,
             enum: ['active', 'inactive'],
+            default:'inactive',
         },
 
         phase: {
             type: String,
-            enum: ['started', 'in progress', 'ended']
+            enum: ['started', 'inProgress', 'ended','nulo'],
+            default: 'nulo',
         }
 
     },
