@@ -36,15 +36,6 @@ const resolversEnrollments = {
       );
       return enrollmentapproved;
     },
-    enrollmentUpdate: async (parent, args) => {
-      const inscripcionEditada = await EnrollmentsModel.findByIdAndUpdate(
-        args._id,
-        {
-          status: args.status
-        },
-      );
-      return inscripcionEditada;
-    },
   },
 
 
