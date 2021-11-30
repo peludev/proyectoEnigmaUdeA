@@ -5,7 +5,7 @@ const typesEnrollments = gql`
         _id: ID!
         project_id: String!
         user_id: String!
-        status: String
+        status: Enum_statusEnrollments
         enrollmentDate: Date
         egressDate: Date
     }
@@ -17,14 +17,19 @@ const typesEnrollments = gql`
         inputEnrollment(
             project_id: String!
             user_id: String!
-            status: String
+            status: Enum_statusEnrollments
             enrollmentDate: Date
             egressDate: Date
         ): Enrollment
+
+
+        approveEnrollment(id: String!): Enrollment
+
         enrollmentUpdate(
             _id: String!
             status: String
         ): Enrollment
+
     }
 `;
 

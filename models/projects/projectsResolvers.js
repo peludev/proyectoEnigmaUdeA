@@ -15,21 +15,19 @@ const resolversProjects = {
   },
 
   Mutation: {
-    inputProject: async (parent, args) => {
-      const projectCreado = await ProjectModel.create({
+    createProject: async (parent, args, context) => {
+      const proyectCreated = await ProjectModel.create({
         name: args.name,
-        generalObjective: args.generalObjective,
-        specificObjectives: args.specificObjectives,
-        budget: args.budget,
         startDate: args.startDate,
         endDate: args.endDate,
-        leader_id: args.leader_id,
-        status: args.status,
-        phase: args.phase
+        budget: args.budget,
+        generalObjective: args.generalObjective,
+        specificObjectives: args.specificObjectives,
       });
-
-      return projectCreado;
+      return proyectCreated;
     },
+  },  
+
     projectUpdate: async (prent, args) => {
       const proyectoEditado = await ProjectModel.findByIdAndUpdate(
         args._id,
@@ -41,6 +39,7 @@ const resolversProjects = {
       return proyectoEditado;
     }
   }
+
 };
 
 export { resolversProjects }

@@ -8,8 +8,8 @@ const typesUsers = gql`
     name: String!
     lastName: String!
     fullName: String
-    role: String!
-    status: String!
+    role: Enum_Role!
+    status: Enum_statusUser
     password: String!
   }
   type Query {
@@ -23,16 +23,19 @@ const typesUsers = gql`
         name: String!
         lastName: String!
         fullName: String
-        role: String!
-        status: String!
+        role: Enum_Role!
+        status: Enum_statusUser
         password: String!
     ): User
+
     userUpdate(
-      _id: String!
-      email: String!
-      status: String!
-      password: String!
-     ): User
+        _id: String!
+        email: String!
+        name: String!
+        lastName: String!
+        status: Enum_statusUser!
+        password: String!
+    ): User 
   }
 `;
 

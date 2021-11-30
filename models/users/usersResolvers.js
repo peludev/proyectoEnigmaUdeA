@@ -4,7 +4,13 @@ const resolversUsers = {
   Query: {
     Users: async (parent, arg) =>{
       console.log('parent user', parent);
-      const users = await UsersModel.find();
+      const users = await UsersModel.find().populate([
+        {
+          path: 'projectsLeader',
+        }
+      ]
+
+      );
       return users;
     },
 
@@ -23,7 +29,6 @@ const resolversUsers = {
         lastName: args.lastName,
         fullName: args.fullName,
         role: args.role,
-        status: args.status,
         password: args.password,
       });
 
@@ -34,6 +39,8 @@ const resolversUsers = {
         args._id,
         {
           email: args.email,
+          name: args.name,
+          lastName: args.lastName,
           status: args.status,
           password: args.password
         },

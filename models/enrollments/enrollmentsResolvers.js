@@ -16,15 +16,28 @@ const resolversEnrollments = {
 
   Mutation: {
     inputEnrollment: async (parent, args) => {
-      const enrollmentCreada = await EnrollmentsModel.create({
+      const enrollmentCreated = await EnrollmentsModel.create({
+        status: args.status,
         project_id: args.project_id,
         user_id: args.user_id,
-        status: args.status,
-        enrollmentDate: args.enrollmentDate,
-        egressDate: args.egressDate
       });
-      return enrollmentCreada;
+      return enrollmentCreated;      
     },
+    approveEnrollment: async (parent, args) => {
+      const enrollmentapproved = await EnrollmentsModel.findByIdAndUpdate(
+        args.id,
+        {
+          status: 'accepted',
+          enrollmentDate: Date.now(),
+        },
+        {new: true}
+      );
+      return enrollmentapproved;
+    },
+  },
+
+
+
     enrollmentUpdate: async (parent, args) => {
       const inscripcionEditada = await EnrollmentsModel.findByIdAndUpdate(
         args._id,
@@ -35,6 +48,7 @@ const resolversEnrollments = {
       return inscripcionEditada;
     }
   }
+
 
 };
 

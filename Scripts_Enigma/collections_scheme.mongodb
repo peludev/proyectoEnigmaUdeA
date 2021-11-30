@@ -79,7 +79,7 @@ db.createCollection(collection, {
           enum: ['active', 'inactive']
         },
         phase: {
-          enum: ['started', 'in progress', 'ended', null]
+          enum: ['started', 'inProgress', 'ended', 'nulo']
         }
       }
     }

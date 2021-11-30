@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-
 // Creamos una constante llamada Schema con un objeto de mongoose
 const { Schema, model } = mongoose;
 
@@ -10,12 +9,26 @@ const userSchema = new Schema(
     email: {
         type: String,
         required: true,
-        unique: true, 
+        unique: true,
+        validate: {
+            validator: (email) => {
+              return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+            },
+            // (email) => {
+            //   if (email.includes('@') && email.includes('.')) {
+            //     return true;
+            //   } else {
+            //     return false;
+            //   }
+            // },
+            message: 'El formato del correo electrónico está malo.',
+          }, 
     },
 
     documentId: {
         type: String,
         required: true,
+        unique: true,
     },
 
     name: {
@@ -40,7 +53,6 @@ const userSchema = new Schema(
 
     status: {
         type: String,
-        required: true,
         enum: ['pending', 'authorized', 'unauthorized'],
         default: 'pending',
     },
@@ -58,10 +70,12 @@ const userSchema = new Schema(
 
 );
 
-userSchema.virtual('projects', {
+
+userSchema.virtual('projectsLeader', {
+
     ref: 'Project',
     localField: '_id',
-    foreignField: 'user',
+    foreignField: 'leader_id',
 });
 
 const UsersModel = model('User', userSchema)
