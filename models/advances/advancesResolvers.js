@@ -23,7 +23,6 @@ const resolversAdvances = {
             });
             return advanceCreated;
         },
-    },
 
 
         advanceUpdate: async (parent, args) =>{

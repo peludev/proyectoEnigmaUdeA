@@ -34,7 +34,7 @@ const resolversEnrollments = {
       );
       return enrollmentapproved;
     },
-  },
+ 
 
 
 
@@ -46,8 +46,8 @@ const resolversEnrollments = {
         },
       );
       return inscripcionEditada;
-    }
-  }
+    },
+  },
 
 
 };

@@ -26,7 +26,7 @@ const resolversProjects = {
       });
       return proyectCreated;
     },
-  },  
+ 
 
     projectUpdate: async (prent, args) => {
       const proyectoEditado = await ProjectModel.findByIdAndUpdate(
@@ -37,8 +37,8 @@ const resolversProjects = {
         },
       );
       return proyectoEditado;
-    }
-  }
+    },
+  },
 
 };
 
