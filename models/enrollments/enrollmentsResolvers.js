@@ -20,6 +20,8 @@ const resolversEnrollments = {
         status: args.status,
         project_id: args.project_id,
         user_id: args.user_id,
+        enrollmentDate: args.enrollmentDate,
+        egressDate: args.egressDate
       });
       return enrollmentCreated;      
     },
@@ -34,10 +36,6 @@ const resolversEnrollments = {
       );
       return enrollmentapproved;
     },
- 
-
-
-
     enrollmentUpdate: async (parent, args) => {
       const inscripcionEditada = await EnrollmentsModel.findByIdAndUpdate(
         args._id,
