@@ -13,6 +13,7 @@ const resolversEnrollments = {
       return enrollment;
     },
   },
+
   Mutation: {
     inputEnrollment: async (parent, args) => {
       const enrollmentCreated = await EnrollmentsModel.create({
@@ -34,6 +35,21 @@ const resolversEnrollments = {
       return enrollmentapproved;
     },
   },
+
+
+
+    enrollmentUpdate: async (parent, args) => {
+      const inscripcionEditada = await EnrollmentsModel.findByIdAndUpdate(
+        args._id,
+        {
+          status: args.status
+        },
+      );
+      return inscripcionEditada;
+    }
+  }
+
+
 };
 
 export { resolversEnrollments }

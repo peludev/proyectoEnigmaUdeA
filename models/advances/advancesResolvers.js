@@ -13,6 +13,7 @@ const resolversAdvances = {
             return advance;
         },
     },
+
     Mutation: {
         inputAdvance: async (parents, args) => {
             const advanceCreated = AdvanceModel.create({
@@ -23,6 +24,20 @@ const resolversAdvances = {
             return advanceCreated;
         },
     },
+
+
+        advanceUpdate: async (parent, args) =>{
+            const avanceEditado = await AdvanceModel.findByIdAndUpdate(
+                args._id,
+                {
+                    observations: args.observations,
+                    description: args.description
+                },
+            );
+            return avanceEditado;
+        }
+    }
+
 };
 
 export { resolversAdvances }

@@ -12,6 +12,8 @@ const typesProjects = gql`
         leader_id: User!
         status: Enum_statusProject
         phase: Enum_phaseProject
+
+
     }
     type Query {
         Projects: [Project]
@@ -28,6 +30,11 @@ const typesProjects = gql`
             leader_id: String
             status: Enum_statusProject
             phase: Enum_phaseProject
+        ): Project
+        projectUpdate(
+            _id: String!
+            status: String
+            phase: String
         ): Project
     }
 `;

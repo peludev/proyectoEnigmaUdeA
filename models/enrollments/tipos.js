@@ -22,7 +22,14 @@ const typesEnrollments = gql`
             egressDate: Date
         ): Enrollment
 
+
         approveEnrollment(id: String!): Enrollment
+
+        enrollmentUpdate(
+            _id: String!
+            status: String
+        ): Enrollment
+
     }
 `;
 

@@ -13,6 +13,7 @@ const resolversProjects = {
       return project;
     },
   },
+
   Mutation: {
     createProject: async (parent, args, context) => {
       const proyectCreated = await ProjectModel.create({
@@ -26,6 +27,19 @@ const resolversProjects = {
       return proyectCreated;
     },
   },  
+
+    projectUpdate: async (prent, args) => {
+      const proyectoEditado = await ProjectModel.findByIdAndUpdate(
+        args._id,
+        {
+          status: args.status,
+          phase: args.phase
+        },
+      );
+      return proyectoEditado;
+    }
+  }
+
 };
 
 export { resolversProjects }
