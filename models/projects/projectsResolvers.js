@@ -26,18 +26,25 @@ const resolversProjects = {
       });
       return proyectCreated;
     },
- 
-
-    projectUpdate: async (prent, args) => {
-      const proyectoEditado = await ProjectModel.findByIdAndUpdate(
+    projectUpdateStatus: async (parent, args) => {
+      const proyectoEstadoEditado = await ProjectModel.findByIdAndUpdate(
         args._id,
         {
-          status: args.status,
-          phase: args.phase
+          status: 'active',
         },
+        {new: true}
       );
-      return proyectoEditado;
+      return proyectoEstadoEditado;
     },
+    projectUpdatePhase: async (parent, args) =>{
+      const proyectoFaseEditado = await ProjectModel.findByIdAndUpdate(
+        args._id,
+        {
+          phase: args.phase
+        }
+      );
+      return proyectoFaseEditado;
+    }
   },
 
 };

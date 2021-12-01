@@ -31,10 +31,12 @@ const typesProjects = gql`
             status: Enum_statusProject
             phase: Enum_phaseProject
         ): Project
-        projectUpdate(
+        projectUpdateStatus(
             _id: String!
-            status: String
-            phase: String
+        ): Project
+        projectUpdatePhase(
+            _id: String!
+            phase: Enum_phaseProject!
         ): Project
     }
 `;

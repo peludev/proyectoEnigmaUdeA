@@ -35,7 +35,12 @@ const typesUsers = gql`
         lastName: String!
         status: Enum_statusUser!
         password: String!
-    ): User 
+    ): User
+    
+    userUpdateStatus(
+      _id: String!
+      status: Enum_statusUser
+    ): User
   }
 `;
 

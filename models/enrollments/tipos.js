@@ -24,12 +24,6 @@ const typesEnrollments = gql`
 
 
         approveEnrollment(id: String!): Enrollment
-
-        enrollmentUpdate(
-            _id: String!
-            status: String
-        ): Enrollment
-
     }
 `;
 
