@@ -15,6 +15,8 @@ const typesUsers = gql`
   type Query {
     Users: [User]
     User(_id: String!): User
+    Students: [User]
+    myProjects : [Project]
   }
   type Mutation {
     inputUser(

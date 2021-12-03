@@ -1,5 +1,5 @@
 import { UsersModel } from '../users/usersModel.js';
-
+import { ProjectModel } from '../projects/projectsModel.js'
 const resolversUsers = {
   Query: {
     Users: async (parent, arg) =>{
@@ -18,6 +18,12 @@ const resolversUsers = {
       const user = await UsersModel.findById(args._id);
       return user;
     },
+
+    Students : async (parent, args) => {
+      const students = await UsersModel.find({role:"student"});
+      return students;
+    },
+   
   },
 
   Mutation: {

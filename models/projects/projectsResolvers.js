@@ -1,4 +1,5 @@
 import { ProjectModel } from '../projects/projectsModel.js'
+import { UsersModel } from '../users/usersModel.js';
 
 const resolversProjects = {
   Query: {
@@ -10,6 +11,17 @@ const resolversProjects = {
 
     Project: async (parent, args) => {
       const project = await ProjectModel.findById(args._id);
+      return project;
+    },
+   
+    //NO FUNCIONA 
+    myProjects: async (parent, args) => {
+      const project = await ProjectModel.aggregate(
+        [{
+            $match: {
+                leader_id: args.leader_id
+            }
+        }])
       return project;
     },
   },
