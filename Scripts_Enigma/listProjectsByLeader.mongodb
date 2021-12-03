@@ -1,0 +1,8 @@
+const database = 'enigmar-db';
+use(database);
+db.projects.aggregate(
+[{
+    $match: {
+        leader_id: ObjectId("6196f766cf039925c9f74992") 
+    }
+}]);
