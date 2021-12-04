@@ -37,7 +37,8 @@ const resolversAdvances = {
                     observations: args.observations,
                     description: args.description
                 },
-            );
+                {new: true}
+             );
             return avanceEditado;
         }
     }
