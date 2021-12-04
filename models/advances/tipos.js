@@ -3,7 +3,7 @@ import { gql } from 'apollo-server-express';
 const typesAdvances = gql`
     type Advance {
         _id: ID!
-        project_id: String!
+        project_id: Project!
         addDate: Date!
         description: String!
         observations: [String]!
@@ -11,6 +11,7 @@ const typesAdvances = gql`
     type Query {
         Advances: [Advance]
         Advance(_id: String!): Advance
+
     }
     type Mutation {
         inputAdvance(

@@ -12,13 +12,14 @@ const typesProjects = gql`
         leader_id: User!
         status: Enum_statusProject
         phase: Enum_phaseProject
+        advances : [Advance]
 
 
     }
     type Query {
         Projects: [Project]
         Project(_id: String!): Project
-        myProjects(_id: String!): [Project]
+        myProjects(leader_id: String!): [Project]
     }
     type Mutation {
         createProject(

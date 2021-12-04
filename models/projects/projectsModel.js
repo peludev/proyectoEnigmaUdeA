@@ -59,7 +59,11 @@ const projectSchema = new Schema(
     }
 );
 
-
-
-const ProjectModel = model('Project', projectSchema)
+projectSchema.virtual('advances', {
+    ref: 'Advance',
+    localField: '_id',
+    foreignField: 'project_id',
+  });
+  
+const ProjectModel = model('Project', projectSchema);
 export { ProjectModel };

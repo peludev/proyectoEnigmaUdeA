@@ -5,7 +5,7 @@ const resolversProjects = {
   Query: {
     Projects: async (parent, arg) =>{
       console.log('parent user', parent);
-      const projects = await ProjectModel.find();
+      const projects = await ProjectModel.find().populate("leader_id").populate("advances");
       return projects;
     },
 
@@ -14,16 +14,10 @@ const resolversProjects = {
       return project;
     },
    
-    //NO FUNCIONA 
     myProjects: async (parent, args) => {
-      const project = await ProjectModel.aggregate(
-        [{
-            $match: {
-                leader_id: args.leader_id
-            }
-        }])
+      const project = await ProjectModel.find({leader_id: args.leader_id}).populate("leader_id");
       return project;
-    },
+    }
   },
 
   Mutation: {

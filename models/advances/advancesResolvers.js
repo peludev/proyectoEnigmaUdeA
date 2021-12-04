@@ -4,7 +4,7 @@ const resolversAdvances = {
     Query: {
         Advances: async (parent, arg) =>{
             console.log('parent advance', parent);
-            const advances = await AdvanceModel.find();
+            const advances = await AdvanceModel.find().populate("project_id");
             return advances;
         },
 
@@ -12,6 +12,11 @@ const resolversAdvances = {
             const advance = await AdvanceModel.findById(args._id);
             return advance;
         },
+       /* filterAdvance: async (parents, args) => {
+            const filterAdvance = await AdvanceModel.find({ project: args._id})
+              .populate('project_id');
+            return filterAdvance;
+          },*/
     },
 
     Mutation: {
