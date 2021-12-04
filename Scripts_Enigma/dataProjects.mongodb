@@ -13,6 +13,7 @@ const Projects = [
         "endDate": new Date(new Date().getTime() + 60*24*60*60000),
         "leader_id": db.users.findOne({email: 'usuario1@mail.com'})._id,
         "status": "inactive",
+        "phase": "nulo",
     },
     {
         "name": "Project 2",
@@ -23,6 +24,7 @@ const Projects = [
         "endDate": new Date(new Date().getTime() + 60*24*60*60000),
         "leader_id": db.users.findOne({email: 'usuario2@mail.com'})._id,
         "status": "inactive",
+        "phase": "nulo",
     },
     {
         "name": "Project 3",
@@ -33,6 +35,7 @@ const Projects = [
         "endDate": new Date(new Date().getTime() + 60*24*60*60000),
         "leader_id": db.users.findOne({email: 'usuario1@mail.com'})._id,
         "status": "inactive",
+        "phase": "nulo",
     },
     {
         "name": "Project 4",
@@ -43,6 +46,7 @@ const Projects = [
         "endDate": new Date(new Date().getTime() + 60*24*60*60000),
         "leader_id": db.users.findOne({email: 'usuario5@mail.com'})._id,
         "status": "inactive",
+        "phase": "nulo",
     },
     {
         "name": "Project 5",
@@ -53,6 +57,7 @@ const Projects = [
         "endDate": new Date(new Date().getTime() + 60*24*60*60000),
         "leader_id": db.users.findOne({email: 'usuario3@mail.com'})._id,
         "status": "inactive",
+        "phase": "nulo",
     }
 ];
 

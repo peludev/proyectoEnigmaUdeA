@@ -11,7 +11,7 @@ const Users = [
         "lastName": "apellido1",
         "role": "admin",
         "status": "pending",
-        "password": "pass123"
+        "password": "pass1"
     },
     {
         "email": "usuario2@mail.com",
@@ -20,7 +20,7 @@ const Users = [
         "lastName": "apellido2",
         "role": "admin",
         "status": "pending",
-        "password": "pass123"
+        "password": "pass2"
     },
     {
         "email": "usuario3@mail.com",
@@ -29,7 +29,7 @@ const Users = [
         "lastName": "apellido3",
         "role": "admin",
         "status": "pending",
-        "password": "pass123"
+        "password": "pass3"
     },
     {
         "email": "usuario4@mail.com",
@@ -38,7 +38,7 @@ const Users = [
         "lastName": "apellido4",
         "role": "admin",
         "status": "pending",
-        "password": "pass123"
+        "password": "pass4"
     },
     {
         "email": "usuario5@mail.com",
@@ -47,7 +47,7 @@ const Users = [
         "lastName": "apellido5",
         "role": "admin",
         "status": "pending",
-        "password": "pass123"
+        "password": "pass5"
     },   
 ];
 
