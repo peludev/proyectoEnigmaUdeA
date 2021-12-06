@@ -19,11 +19,14 @@ const typesAdvances = gql`
             description: String!
             observations: [String]!
         ): Advance
-        advanceUpdate(
+        advanceUpdateObservations(
             _id: String!
-            description: String!
             observations: [String]!
         ): Advance
+        advanceUpdateDescription(
+            _id: String!
+            description: String!
+        ):Advance
     }
 `;
 
