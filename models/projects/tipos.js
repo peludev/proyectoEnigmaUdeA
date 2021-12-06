@@ -13,8 +13,6 @@ const typesProjects = gql`
         status: Enum_statusProject
         phase: Enum_phaseProject
         advances : [Advance]
-
-
     }
     type Query {
         Projects: [Project]
@@ -32,6 +30,13 @@ const typesProjects = gql`
             leader_id: String
             status: Enum_statusProject
             phase: Enum_phaseProject
+        ): Project
+        projectUpdate(
+            _id: String!
+            name: String
+            generalObjective: String
+            specificObjectives: [String]
+            budget: Float
         ): Project
         projectUpdateStatus(
             _id: String!

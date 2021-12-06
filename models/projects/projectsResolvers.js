@@ -32,6 +32,19 @@ const resolversProjects = {
       });
       return proyectCreated;
     },
+    projectUpdate: async (parent, args) => {
+      const proyectoEditado = await ProjectModel.findByIdAndUpdate(
+        args._id,
+        {
+          name: args.name,
+          generalObjective: args.generalObjective,
+          specificObjectives: args.specificObjectives,
+          budget: args.budget
+        },
+        {new: true}
+      );
+      return proyectoEditado;
+    },
     projectUpdateStatus: async (parent, args) => {
       const proyectoEstadoEditado = await ProjectModel.findByIdAndUpdate(
         args._id,
