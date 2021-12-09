@@ -76,7 +76,7 @@ db.createCollection(collection, {
           bsonType: 'objectId'
         },
         status: {
-          enum: ['active', 'inactive']
+          enum: ['active', 'inactive', 'pending']
         },
         phase: {
           enum: ['started', 'inProgress', 'ended', 'nulo']
