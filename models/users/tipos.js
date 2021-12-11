@@ -16,6 +16,7 @@ const typesUsers = gql`
     Users: [User]
     User(_id: String!): User
     Students: [User]
+    Pending: [User]
     myProjects : [Project]
   }
   type Mutation {

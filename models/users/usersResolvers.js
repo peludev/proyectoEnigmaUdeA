@@ -23,6 +23,11 @@ const resolversUsers = {
       const students = await UsersModel.find({role:"student"});
       return students;
     },
+
+    Pending: async (parent, args) =>{
+      const pending = await UsersModel.find({status:"pending"});
+      return pending;
+    },
    
   },
 

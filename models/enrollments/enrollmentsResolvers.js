@@ -3,8 +3,8 @@ import { EnrollmentsModel } from '../enrollments/enrollmentsModel.js'
 const resolversEnrollments = {
   Query: {
     Enrollments: async (parent, arg) =>{
-      console.log('parent user', parent);
-      const enrollments = await EnrollmentsModel.find();
+      console.log('parent enrollments', parent);
+      const enrollments = await EnrollmentsModel.find().populate(["project_id", "user_id"]);
       return enrollments;
     },
 

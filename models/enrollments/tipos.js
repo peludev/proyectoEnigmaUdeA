@@ -3,8 +3,8 @@ import { gql } from 'apollo-server-express';
 const typesEnrollments = gql`
     type Enrollment {
         _id: ID!
-        project_id: String!
-        user_id: String!
+        project_id: Project!
+        user_id: User!
         status: Enum_statusEnrollments
         enrollmentDate: Date
         egressDate: Date

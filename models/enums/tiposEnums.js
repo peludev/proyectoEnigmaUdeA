@@ -16,6 +16,7 @@ const typesEnums = gql`
   enum Enum_statusProject {
     active
     inactive
+    pending
   }
  
   enum Enum_phaseProject {

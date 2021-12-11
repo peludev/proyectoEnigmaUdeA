@@ -11,7 +11,6 @@ const typesAdvances = gql`
     type Query {
         Advances: [Advance]
         Advance(_id: String!): Advance
-
     }
     type Mutation {
         inputAdvance(
@@ -20,11 +19,14 @@ const typesAdvances = gql`
             description: String!
             observations: [String]!
         ): Advance
-        advanceUpdate(
+        advanceUpdateObservations(
             _id: String!
-            description: String!
             observations: [String]!
         ): Advance
+        advanceUpdateDescription(
+            _id: String!
+            description: String!
+        ):Advance
     }
 `;
 
