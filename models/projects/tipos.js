@@ -39,7 +39,8 @@ const typesProjects = gql`
             budget: Float
         ): Project
         projectUpdateStatus(
-            _id: String!
+            _id: String!,
+            status: String!,
         ): Project
         projectUpdatePhase(
             _id: String!

@@ -49,7 +49,7 @@ const resolversProjects = {
       const proyectoEstadoEditado = await ProjectModel.findByIdAndUpdate(
         args._id,
         {
-          status: 'active',
+          status: args.status,
         },
         {new: true}
       );
