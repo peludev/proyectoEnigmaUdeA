@@ -30,27 +30,17 @@ const resolversAdvances = {
         },
 
 
-        advanceUpdateObservations: async (parent, args) =>{
+        advanceUpdate: async (parent, args) =>{
             const avanceEditadoObs = await AdvanceModel.findByIdAndUpdate(
                 args._id,
                 {
                     observations: args.observations,
+                    description: args.description,
                 },
                 {new: true}
             );
             return avanceEditadoObs;
         },
-
-        advanceUpdateDescription: async (parent, args) =>{
-            const avanceEditadoDes = await AdvanceModel.findByIdAndUpdate(
-                args._id,
-                {
-                    description: args.description,
-                },
-                {new: true}
-            );
-            return avanceEditadoDes;
-        }
     }
 
 };

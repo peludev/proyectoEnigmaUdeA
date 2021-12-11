@@ -22,7 +22,7 @@ const advanceSchema = new Schema (
         },
 
         observations: {
-            type: Array,
+            type: String,
             required: true,
         }
     }

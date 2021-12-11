@@ -6,7 +6,7 @@ const typesAdvances = gql`
         project_id: Project!
         addDate: Date!
         description: String!
-        observations: [String]!
+        observations: String!
     }
     type Query {
         Advances: [Advance]
@@ -17,16 +17,13 @@ const typesAdvances = gql`
             project_id: String!
             addDate: Date!
             description: String!
-            observations: [String]!
+            observations: String!
         ): Advance
-        advanceUpdateObservations(
+        advanceUpdate(
             _id: String!
-            observations: [String]!
-        ): Advance
-        advanceUpdateDescription(
-            _id: String!
+            observations: String!
             description: String!
-        ):Advance
+        ): Advance
     }
 `;
 
