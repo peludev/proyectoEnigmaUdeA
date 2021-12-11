@@ -37,7 +37,6 @@ const typesUsers = gql`
         name: String!
         lastName: String!
         status: Enum_statusUser!
-        password: String!
     ): User
     
     userUpdateStatus(

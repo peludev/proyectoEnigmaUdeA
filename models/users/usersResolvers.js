@@ -52,10 +52,9 @@ const resolversUsers = {
           email: args.email,
           name: args.name,
           lastName: args.lastName,
-          //status: args.status,
-          password: args.password
+          status: args.status,
         },
-        
+        {new: true}
       );
       return usuarioEditado;
     },
