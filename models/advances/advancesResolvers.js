@@ -12,6 +12,11 @@ const resolversAdvances = {
             const advance = await AdvanceModel.findById(args._id);
             return advance;
         },
+
+        AdvanceP: async (parent, args) =>{
+            const advance = await AdvanceModel.find({project_id: args.project_id}).populate("project_id");
+            return advance;
+        },
        /* filterAdvance: async (parents, args) => {
             const filterAdvance = await AdvanceModel.find({ project: args._id})
               .populate('project_id');
