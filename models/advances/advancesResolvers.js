@@ -29,6 +29,7 @@ const resolversAdvances = {
             const advanceCreated = AdvanceModel.create({
                 addDate: args.addDate,
                 description: args.description,
+                observations: args.observations,
                 project_id: args.project_id,
             });
             return advanceCreated;

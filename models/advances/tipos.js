@@ -18,7 +18,7 @@ const typesAdvances = gql`
             project_id: String!
             addDate: Date!
             description: String!
-            observations: String!
+            observations: String
         ): Advance
         advanceUpdate(
             _id: String!
