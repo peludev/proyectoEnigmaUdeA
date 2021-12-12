@@ -28,8 +28,6 @@ const typesProjects = gql`
             startDate: Date!
             endDate: Date!
             leader_id: String
-            status: Enum_statusProject
-            phase: Enum_phaseProject
         ): Project
         projectUpdate(
             _id: String!
