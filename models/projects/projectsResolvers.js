@@ -29,6 +29,7 @@ const resolversProjects = {
         budget: args.budget,
         generalObjective: args.generalObjective,
         specificObjectives: args.specificObjectives,
+        leader_id: args.leader_id
       });
       return proyectCreated;
     },
