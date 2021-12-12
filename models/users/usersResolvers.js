@@ -28,6 +28,11 @@ const resolversUsers = {
       const pending = await UsersModel.find({status:"pending"});
       return pending;
     },
+
+    LiderAut: async (parent, args ) =>{
+      const lider = await UsersModel.find({status: "authorized", role: "leader"});
+      return lider;
+    },
    
   },
 
