@@ -15,7 +15,7 @@ db.createCollection(collection, {
           pattern: '^[a-z0-9+_.-]+@[a-z0-9.-]+$'
         },
         documentId: {
-          bsonType: 'long',
+          bsonType: 'string',
         },
         name: {
           bsonType: 'string'

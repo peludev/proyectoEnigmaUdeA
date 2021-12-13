@@ -44,6 +44,7 @@ const resolversAdvances = {
                     description: args.description,
                 },
                 {new: true}
+
             );
             return avanceEditadoObs;
         },
