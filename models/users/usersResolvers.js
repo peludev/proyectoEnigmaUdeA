@@ -52,7 +52,7 @@ const resolversUsers = {
           email: args.email,
           name: args.name,
           lastName: args.lastName,
-          //status: args.status,
+          status: args.status,
           password: args.password
         },
         
