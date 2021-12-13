@@ -58,6 +58,7 @@ const resolversUsers = {
           name: args.name,
           lastName: args.lastName,
           status: args.status,
+          password: args.password
         },
         {new: true}
       );
