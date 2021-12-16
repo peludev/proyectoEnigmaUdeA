@@ -1,0 +1,25 @@
+Integrantes
+	
+Verónica Seguro Varela
+Adriana Paredes Salinas
+Danny Styven Gómez Duque
+Pedro Luis Acosta Pérez
+Luis Alberto Tafur Jiménez
+
+Presentaciones
+
+
+Luis 
+Profesión: Ingeniero de Sistemas, intereses: ciencia de datos, familia: esposa e hijo, hobbies: jugar tenis
+
+Danny Gómez
+Profesión: Psicólogo - Diseñador Gráfico, Intereses: frontend, UI/UX, emprendimiento, Hobbies: estudiar en línea, video juegos, leer y ayudar a otros.
+
+Adriana
+Profesión: Ingeniera de Sistemas, actualmente me desempeño como Docente de aula. Intereses: ciencia de datos, diseño web. Hobbies: realizar cursos de actualización, cine.
+
+Verónica
+Profesión: Estudiante de Estadística, Intereses: Machine Learning, Big Data, Hobbies: Compartir con la familia, jugar baloncesto.
+
+Pedro
+Profesión: Ingeniero Químico. Intereses: desarrollo web, ciencia de datos y macrodatos. Hobbies: leer noticias, blogs, o ver partidos de fútbol.
